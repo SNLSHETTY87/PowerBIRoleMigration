@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12122a"/>
+      <stop offset="100%" stop-color="#0d0d1f"/>
+    </linearGradient>
+    <linearGradient id="expG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f36f21"/><stop offset="100%" stop-color="#c45510"/>
+    </linearGradient>
+    <linearGradient id="impG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565c0"/><stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+    <linearGradient id="sexpG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e65100"/><stop offset="100%" stop-color="#bf360c"/>
+    </linearGradient>
+    <linearGradient id="simpG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d47a1"/><stop offset="100%" stop-color="#1a237e"/>
+    </linearGradient>
+    <linearGradient id="fileG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e7d32"/><stop offset="100%" stop-color="#1b5e20"/>
+    </linearGradient>
+    <filter id="sd">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="aO" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,9 3,0 6" fill="#f36f21"/>
+    </marker>
+    <marker id="aB" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,9 3,0 6" fill="#1565c0"/>
+    </marker>
+    <marker id="aG" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,9 3,0 6" fill="#4caf50"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <pattern id="dp" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="#fff" fill-opacity="0.025"/>
+  </pattern>
+  <rect width="1200" height="720" fill="url(#dp)"/>
+
+  <!-- HEADER -->
+  <rect x="0" y="0" width="1200" height="64" fill="#0a0a1a"/>
+  <rect x="0" y="60" width="1200" height="4" fill="url(#expG)"/>
+  <rect x="26" y="11" width="6" height="42" fill="#f36f21" rx="3"/>
+  <text x="44" y="32" font-family="Segoe UI, Arial" font-size="21" font-weight="700" fill="#f36f21">Power BI Role Copy — 4 Custom Actions</text>
+  <text x="44" y="52" font-family="Segoe UI, Arial" font-size="11" fill="#666688">Tabular Editor 2  ·  TMSL over XMLA  ·  Zero extra installs  ·  DataWithSNS</text>
+  <rect x="1016" y="11" width="162" height="42" rx="6" fill="#f36f21" fill-opacity="0.1" stroke="#f36f21" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="1097" y="28" font-family="Segoe UI, Arial" font-size="11" font-weight="700" fill="#f36f21" text-anchor="middle">Right-click in TE2</text>
+  <text x="1097" y="45" font-family="Segoe UI, Arial" font-size="10" fill="#aaaacc" text-anchor="middle">No scripts to paste</text>
+
+  <!-- COLUMN HEADERS -->
+  <rect x="26" y="76" width="270" height="22" rx="4" fill="#1e1e36"/>
+  <text x="161" y="91" font-family="Segoe UI, Arial" font-size="11" font-weight="700" fill="#888899" text-anchor="middle">RIGHT-CLICK MENU</text>
+  <rect x="308" y="76" width="400" height="22" rx="4" fill="url(#expG)" fill-opacity="0.75"/>
+  <text x="508" y="91" font-family="Segoe UI, Arial" font-size="12" font-weight="700" fill="white" text-anchor="middle">📤  EXPORT ACTIONS</text>
+  <rect x="720" y="76" width="454" height="22" rx="4" fill="url(#impG)" fill-opacity="0.75"/>
+  <text x="947" y="91" font-family="Segoe UI, Arial" font-size="12" font-weight="700" fill="white" text-anchor="middle">📥  IMPORT ACTIONS</text>
+
+  <!-- MENU PANEL -->
+  <rect x="26" y="108" width="270" height="342" rx="10" fill="#16162e" stroke="#252545" stroke-width="1" filter="url(#sd)"/>
+  <rect x="26" y="108" width="270" height="40" rx="10" fill="#20203a"/>
+  <rect x="26" y="130" width="270" height="18" fill="#20203a"/>
+  <text x="44" y="128" font-family="Segoe UI, Arial" font-size="12" font-weight="700" fill="#ccccdd">Power BI Semantic Model</text>
+  <text x="44" y="146" font-family="Segoe UI, Arial" font-size="9" fill="#444466">right-click the model name in TE2 TOM Explorer</text>
+  <line x1="36" y1="153" x2="286" y2="153" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="44" y="168" font-family="Segoe UI, Arial" font-size="10" fill="#3a3a5a">  Edit</text>
+  <text x="44" y="184" font-family="Segoe UI, Arial" font-size="10" fill="#3a3a5a">  Refresh</text>
+  <text x="44" y="200" font-family="Segoe UI, Arial" font-size="10" fill="#3a3a5a">  Add Relationship</text>
+  <line x1="36" y1="207" x2="286" y2="207" stroke="#2a2a4a" stroke-width="1"/>
+  <rect x="26" y="210" width="270" height="224" rx="0" fill="#1b1b32"/>
+  <rect x="26" y="420" width="270" height="30" rx="0" fill="#1b1b32"/>
+  <rect x="26" y="210" width="5" height="224" fill="#f36f21" rx="2"/>
+  <text x="44" y="228" font-family="Segoe UI, Arial" font-size="12" font-weight="700" fill="#f36f21">  Copy Roles  ▶</text>
+  <line x1="36" y1="234" x2="286" y2="234" stroke="#252545" stroke-width="1"/>
+  <rect x="31" y="238" width="260" height="30" rx="4" fill="#1f1f3a"/>
+  <text x="44" y="257" font-family="Segoe UI, Arial" font-size="11" fill="#ffaa66">📤 Export — All roles</text>
+  <text x="282" y="257" font-family="Segoe UI, Arial" font-size="9" fill="#555577" text-anchor="end">full</text>
+  <rect x="31" y="273" width="260" height="30" rx="4" fill="#221c18"/>
+  <text x="44" y="292" font-family="Segoe UI, Arial" font-size="11" fill="#ff8c44">📤 Export — Select roles</text>
+  <text x="282" y="292" font-family="Segoe UI, Arial" font-size="9" fill="#555577" text-anchor="end">partial</text>
+  <rect x="31" y="308" width="260" height="30" rx="4" fill="#181828"/>
+  <text x="44" y="327" font-family="Segoe UI, Arial" font-size="11" fill="#66aaff">📥 Import — Standard</text>
+  <text x="282" y="327" font-family="Segoe UI, Arial" font-size="9" fill="#555577" text-anchor="end">simple</text>
+  <rect x="31" y="343" width="260" height="30" rx="4" fill="#14142a"/>
+  <text x="44" y="362" font-family="Segoe UI, Arial" font-size="11" fill="#4499ee">📥 Import — Select + Diff</text>
+  <text x="282" y="362" font-family="Segoe UI, Arial" font-size="9" fill="#555577" text-anchor="end">advanced</text>
+  <line x1="36" y1="381" x2="286" y2="381" stroke="#252545" stroke-width="1"/>
+  <text x="161" y="396" font-family="Segoe UI, Arial" font-size="9" fill="#444466" text-anchor="middle">MacroActions.json →</text>
+  <text x="161" y="410" font-family="Consolas, monospace" font-size="8" fill="#f36f21" text-anchor="middle">%LOCALAPPDATA%\TabularEditor\</text>
+  <text x="161" y="425" font-family="Segoe UI, Arial" font-size="9" fill="#444466" text-anchor="middle">Drop file · Restart TE2 · Done</text>
+  <rect x="26" y="436" width="270" height="14" rx="0" fill="#1b1b32"/>
+  <rect x="26" y="440" width="270" height="10" rx="0,0,10,10" fill="#1b1b32"/>
+
+  <!-- CONNECTOR LINES -->
+  <line x1="296" y1="253" x2="308" y2="175" stroke="#f36f21" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aO)"/>
+  <line x1="296" y1="287" x2="308" y2="316" stroke="#f36f21" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aO)" opacity="0.6"/>
+  <line x1="296" y1="322" x2="720" y2="175" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aB)"/>
+  <line x1="296" y1="357" x2="720" y2="316" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aB)" opacity="0.6"/>
+
+  <!-- ACTION 1: EXPORT ALL -->
+  <rect x="308" y="108" width="400" height="186" rx="8" fill="#1e1e36" stroke="#f36f21" stroke-width="1" stroke-opacity="0.5" filter="url(#sd)"/>
+  <rect x="308" y="108" width="50" height="186" rx="8" fill="url(#expG)"/>
+  <rect x="340" y="108" width="18" height="186" fill="#f36f21"/>
+  <text x="329" y="208" font-family="Segoe UI, Arial" font-size="9" font-weight="700" fill="white" text-anchor="middle" transform="rotate(-90,329,200)">ALL ROLES</text>
+  <text x="372" y="134" font-family="Segoe UI, Arial" font-size="16">📤</text>
+  <text x="396" y="136" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#ffaa66">Export — All Roles</text>
+  <line x1="370" y1="144" x2="698" y2="144" stroke="#252545" stroke-width="1"/>
+  <text x="370" y="162" font-family="Segoe UI, Arial" font-size="11" fill="#ccccdd">Exports all roles + members + RLS filters</text>
+  <text x="370" y="179" font-family="Segoe UI, Arial" font-size="10" fill="#888899">Timestamped filename  ·  _meta block  ·  Audit log</text>
+  <text x="370" y="196" font-family="Segoe UI, Arial" font-size="10" fill="#888899">identityProvider auto-set to AzureAD  ·  Read-only</text>
+  <rect x="370" y="206" width="118" height="20" rx="10" fill="#f36f21" fill-opacity="0.15" stroke="#f36f21" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="429" y="219" font-family="Segoe UI, Arial" font-size="9" fill="#ffaa66" text-anchor="middle">Full model copy</text>
+  <rect x="496" y="206" width="96" height="20" rx="10" fill="#252545"/>
+  <text x="544" y="219" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Backup / Archive</text>
+  <rect x="600" y="206" width="90" height="20" rx="10" fill="#252545"/>
+  <text x="645" y="219" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Routine sync</text>
+  <line x1="508" y1="294" x2="508" y2="348" stroke="#4caf50" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#aG)"/>
+
+  <!-- ACTION 2: EXPORT SELECT -->
+  <rect x="308" y="308" width="400" height="196" rx="8" fill="#1e1e36" stroke="#e65100" stroke-width="1" stroke-opacity="0.5" filter="url(#sd)"/>
+  <rect x="308" y="308" width="50" height="196" rx="8" fill="url(#sexpG)"/>
+  <rect x="340" y="308" width="18" height="196" fill="#e65100"/>
+  <text x="329" y="412" font-family="Segoe UI, Arial" font-size="8" font-weight="700" fill="white" text-anchor="middle" transform="rotate(-90,329,404)">SELECT ROLES</text>
+  <text x="372" y="332" font-family="Segoe UI, Arial" font-size="16">📤</text>
+  <text x="396" y="334" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#ff9955">Export — Select Roles</text>
+  <line x1="370" y1="342" x2="698" y2="342" stroke="#252545" stroke-width="1"/>
+  <rect x="370" y="350" width="324" height="106" rx="5" fill="#0d0d20" stroke="#333355" stroke-width="1"/>
+  <text x="380" y="366" font-family="Consolas, monospace" font-size="9" fill="#555577">Filter: [market_code]   ✓ All   ✗ None   ★ New</text>
+  <line x1="370" y1="370" x2="694" y2="370" stroke="#1e1e36" stroke-width="1"/>
+  <rect x="378" y="372" width="7" height="7" fill="none" stroke="#555577" stroke-width="1"/>
+  <text x="390" y="381" font-family="Consolas, monospace" font-size="9" fill="#444466">Role A — existing role</text>
+  <rect x="378" y="385" width="7" height="7" fill="none" stroke="#555577" stroke-width="1"/>
+  <text x="390" y="394" font-family="Consolas, monospace" font-size="9" fill="#444466">Role B — existing role</text>
+  <rect x="378" y="398" width="7" height="7" fill="#4caf50"/>
+  <text x="385" y="406" font-family="Consolas, monospace" font-size="9" fill="#88ee88">✓</text>
+  <text x="390" y="406" font-family="Consolas, monospace" font-size="9" fill="#64c864">Role C — NEW  ← auto-selected by ★</text>
+  <rect x="378" y="411" width="7" height="7" fill="#4caf50"/>
+  <text x="385" y="419" font-family="Consolas, monospace" font-size="9" fill="#88ee88">✓</text>
+  <text x="390" y="419" font-family="Consolas, monospace" font-size="9" fill="#64c864">Role D — NEW  ← auto-selected by ★</text>
+  <text x="380" y="444" font-family="Consolas, monospace" font-size="9" fill="#64c864">2 selected  ·  [▶ Export Selected]  ·  _partial file</text>
+  <rect x="370" y="464" width="144" height="20" rx="10" fill="#e65100" fill-opacity="0.15" stroke="#e65100" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="442" y="477" font-family="Segoe UI, Arial" font-size="9" fill="#ff9955" text-anchor="middle">★ New roles auto-select</text>
+  <rect x="522" y="464" width="98" height="20" rx="10" fill="#252545"/>
+  <text x="571" y="477" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Partial push</text>
+  <rect x="628" y="464" width="66" height="20" rx="10" fill="#252545"/>
+  <text x="661" y="477" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">By region</text>
+  <line x1="508" y1="504" x2="508" y2="526" stroke="#4caf50" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#aG)"/>
+
+  <!-- FILE CARDS -->
+  <rect x="398" y="528" width="222" height="40" rx="6" fill="url(#fileG)" filter="url(#sd)"/>
+  <text x="509" y="545" font-family="Segoe UI, Arial" font-size="11" font-weight="700" fill="white" text-anchor="middle">📄 roles_Model_20260516.json</text>
+  <text x="509" y="560" font-family="Consolas, monospace" font-size="9" fill="#a5d6a7" text-anchor="middle">Full · all roles · _meta included</text>
+  <rect x="398" y="578" width="222" height="40" rx="6" fill="#1b5e20" stroke="#4caf50" stroke-width="1" stroke-dasharray="5,3" filter="url(#sd)"/>
+  <text x="509" y="595" font-family="Segoe UI, Arial" font-size="11" font-weight="700" fill="white" text-anchor="middle">📄 roles_Model_partial_1430.json</text>
+  <text x="509" y="610" font-family="Consolas, monospace" font-size="9" fill="#a5d6a7" text-anchor="middle">Partial · selected roles · ##TARGETDB##</text>
+  <text x="509" y="630" font-family="Consolas, monospace" font-size="9" fill="#444466" text-anchor="middle">C:\temp\PBIRoleCopy\  +  audit.log</text>
+
+  <!-- file → import arrows -->
+  <line x1="620" y1="548" x2="720" y2="175" stroke="#4caf50" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aG)" opacity="0.5"/>
+  <line x1="620" y1="598" x2="720" y2="316" stroke="#4caf50" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aG)" opacity="0.5"/>
+
+  <!-- ACTION 3: IMPORT STANDARD -->
+  <rect x="720" y="108" width="454" height="186" rx="8" fill="#1e1e36" stroke="#1565c0" stroke-width="1" stroke-opacity="0.5" filter="url(#sd)"/>
+  <rect x="1126" y="108" width="48" height="186" rx="8" fill="url(#impG)"/>
+  <rect x="1126" y="108" width="18" height="186" fill="#1565c0"/>
+  <text x="1147" y="208" font-family="Segoe UI, Arial" font-size="9" font-weight="700" fill="white" text-anchor="middle" transform="rotate(90,1147,200)">STANDARD</text>
+  <text x="730" y="134" font-family="Segoe UI, Arial" font-size="16">📥</text>
+  <text x="754" y="136" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#66aaff">Import — Standard</text>
+  <line x1="730" y1="144" x2="1118" y2="144" stroke="#252545" stroke-width="1"/>
+  <text x="730" y="162" font-family="Segoe UI, Arial" font-size="11" fill="#ccccdd">File picker  ·  Confirmation dialog  ·  ExecuteCommand</text>
+  <text x="730" y="179" font-family="Segoe UI, Arial" font-size="10" fill="#888899">Source model · role count · exported by · date shown before commit</text>
+  <text x="730" y="196" font-family="Segoe UI, Arial" font-size="10" fill="#888899">Same-model safety check  ·  Audit log  ·  Indented TMSL</text>
+  <rect x="730" y="206" width="382" height="60" rx="5" fill="#0d0d20" stroke="#333355" stroke-width="1"/>
+  <text x="740" y="222" font-family="Consolas, monospace" font-size="9" fill="#ffaa50">─── IMPORT CONFIRMATION ───</text>
+  <text x="740" y="237" font-family="Consolas, monospace" font-size="9" fill="#ccccdd">FILE:    roles_Model_20260516.json</text>
+  <text x="740" y="250" font-family="Consolas, monospace" font-size="9" fill="#ccccdd">SOURCE:  Model A     ROLES: 247     BY: username</text>
+  <text x="884" y="259" font-family="Consolas, monospace" font-size="10" fill="#f36f21" text-anchor="middle">↓ ↓ ↓</text>
+  <text x="740" y="258" font-family="Consolas, monospace" font-size="9" fill="none">.</text>
+  <text x="884" y="260" font-family="Consolas, monospace" font-size="9" fill="none">.</text>
+  <text x="740" y="260" font-family="Consolas, monospace" font-size="9" fill="#ccccdd">TARGET:  Model B Archive           [Yes]  [No]</text>
+  <rect x="730" y="274" width="114" height="20" rx="10" fill="#1565c0" fill-opacity="0.15" stroke="#1565c0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="787" y="287" font-family="Segoe UI, Arial" font-size="9" fill="#66aaff" text-anchor="middle">Simple full import</text>
+  <rect x="852" y="274" width="100" height="20" rx="10" fill="#252545"/>
+  <text x="902" y="287" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Trust the file</text>
+  <rect x="960" y="274" width="130" height="20" rx="10" fill="#252545"/>
+  <text x="1025" y="287" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">After select export</text>
+
+  <!-- ACTION 4: IMPORT SELECT+DIFF -->
+  <rect x="720" y="308" width="454" height="196" rx="8" fill="#1e1e36" stroke="#0d47a1" stroke-width="1" stroke-opacity="0.5" filter="url(#sd)"/>
+  <rect x="1126" y="308" width="48" height="196" rx="8" fill="url(#simpG)"/>
+  <rect x="1126" y="308" width="18" height="196" fill="#0d47a1"/>
+  <text x="1147" y="412" font-family="Segoe UI, Arial" font-size="8" font-weight="700" fill="white" text-anchor="middle" transform="rotate(90,1147,404)">SELECT+DIFF</text>
+  <text x="730" y="332" font-family="Segoe UI, Arial" font-size="16">📥</text>
+  <text x="754" y="334" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="#90caf9">Import — Select + Diff</text>
+  <line x1="730" y1="342" x2="1118" y2="342" stroke="#252545" stroke-width="1"/>
+  <rect x="730" y="350" width="388" height="110" rx="5" fill="#0d0d20" stroke="#333355" stroke-width="1"/>
+  <text x="740" y="366" font-family="Consolas, monospace" font-size="9" fill="#555577">Filter: [__]  ✓ All  ✗ None  ● New only  ● Updates only</text>
+  <line x1="730" y1="370" x2="1118" y2="370" stroke="#1e1e36" stroke-width="1"/>
+  <rect x="730" y="371" width="388" height="17" fill="#162816"/>
+  <rect x="738" y="374" width="7" height="7" fill="#4caf50"/>
+  <text x="750" y="382" font-family="Consolas, monospace" font-size="9" fill="#64c864">[ NEW ]   Role C — 0 members · 2 filters</text>
+  <rect x="730" y="388" width="388" height="17" fill="#162816"/>
+  <rect x="738" y="391" width="7" height="7" fill="#4caf50"/>
+  <text x="750" y="399" font-family="Consolas, monospace" font-size="9" fill="#64c864">[ NEW ]   Role D — 0 members · 1 filter</text>
+  <rect x="730" y="405" width="388" height="17" fill="#291a08"/>
+  <rect x="738" y="408" width="7" height="7" fill="#ff9800"/>
+  <text x="750" y="416" font-family="Consolas, monospace" font-size="9" fill="#ffaa50">[UPDATE]  Role A — 3 members · 2 filters  ← will overwrite</text>
+  <rect x="730" y="422" width="388" height="17" fill="#1a1a28"/>
+  <rect x="738" y="425" width="7" height="7" fill="none" stroke="#555577" stroke-width="1"/>
+  <text x="750" y="433" font-family="Consolas, monospace" font-size="9" fill="#444466">[UPDATE]  Role B — 1 member  · 2 filters  ← deselected</text>
+  <text x="740" y="452" font-family="Consolas, monospace" font-size="9" fill="#64c864">3 of 4 selected · 2 new · 1 update · ☐ Dry Run · [▶ Import]</text>
+  <rect x="730" y="468" width="104" height="20" rx="10" fill="#0d47a1" fill-opacity="0.2" stroke="#0d47a1" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="782" y="481" font-family="Segoe UI, Arial" font-size="9" fill="#90caf9" text-anchor="middle">NEW vs UPDATE</text>
+  <rect x="842" y="468" width="88" height="20" rx="10" fill="#252545"/>
+  <text x="886" y="481" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Role selector</text>
+  <rect x="938" y="468" width="78" height="20" rx="10" fill="#252545"/>
+  <text x="977" y="481" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Dry run</text>
+  <rect x="1024" y="468" width="86" height="20" rx="10" fill="#252545"/>
+  <text x="1067" y="481" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Rollback safe</text>
+  <rect x="730" y="494" width="388" height="18" rx="4" fill="#b71c1c" fill-opacity="0.18" stroke="#ef5350" stroke-width="1"/>
+  <text x="924" y="506" font-family="Segoe UI, Arial" font-size="9" fill="#ef9a9a" text-anchor="middle">⚠  Do NOT press Ctrl+S after import — ExecuteCommand already committed via XMLA</text>
+
+  <!-- BOTTOM STRIP -->
+  <rect x="0" y="648" width="1200" height="72" fill="#08081a"/>
+  <line x1="0" y1="648" x2="1200" y2="648" stroke="#1e1e36" stroke-width="2"/>
+  <!-- 5 pills -->
+  <rect x="20" y="660" width="218" height="50" rx="6" fill="#111126"/>
+  <text x="129" y="676" font-family="Segoe UI, Arial" font-size="10" font-weight="700" fill="#f36f21" text-anchor="middle">SETUP  (one time)</text>
+  <text x="129" y="691" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Drop MacroActions.json into</text>
+  <text x="129" y="703" font-family="Consolas, monospace" font-size="8" fill="#f36f21" text-anchor="middle">%LOCALAPPDATA%\TabularEditor\</text>
+
+  <rect x="248" y="660" width="194" height="50" rx="6" fill="#111126"/>
+  <text x="345" y="676" font-family="Segoe UI, Arial" font-size="10" font-weight="700" fill="#f36f21" text-anchor="middle">COPIES</text>
+  <text x="345" y="691" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Roles · Members · RLS DAX · ModelPermission</text>
+  <text x="345" y="703" font-family="Segoe UI, Arial" font-size="9" fill="#444466" text-anchor="middle">Not: OLS · measures · data</text>
+
+  <rect x="452" y="660" width="210" height="50" rx="6" fill="#111126"/>
+  <text x="557" y="676" font-family="Segoe UI, Arial" font-size="10" font-weight="700" fill="#f36f21" text-anchor="middle">FILES</text>
+  <text x="557" y="691" font-family="Consolas, monospace" font-size="8" fill="#a5d6a7" text-anchor="middle">C:\temp\PBIRoleCopy\</text>
+  <text x="557" y="703" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">Timestamped · _meta · audit.log</text>
+
+  <rect x="672" y="660" width="210" height="50" rx="6" fill="#111126"/>
+  <text x="777" y="676" font-family="Segoe UI, Arial" font-size="10" font-weight="700" fill="#f36f21" text-anchor="middle">REQUIRES</text>
+  <text x="777" y="691" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">TE2 · Premium/PPU/Fabric</text>
+  <text x="777" y="703" font-family="Segoe UI, Arial" font-size="9" fill="#888899" text-anchor="middle">XMLA Read Write · Workspace Member+</text>
+
+  <rect x="892" y="660" width="288" height="50" rx="6" fill="#111126"/>
+  <text x="1036" y="676" font-family="Segoe UI, Arial" font-size="10" font-weight="700" fill="#f36f21" text-anchor="middle">WHEN TO USE WHICH</text>
+  <text x="900" y="691" font-family="Segoe UI, Arial" font-size="9" fill="#ffaa66">📤 All</text>
+  <text x="928" y="691" font-family="Segoe UI, Arial" font-size="9" fill="#555577">full copy/backup</text>
+  <text x="1050" y="691" font-family="Segoe UI, Arial" font-size="9" fill="#ff9955">📤 Select</text>
+  <text x="1096" y="691" font-family="Segoe UI, Arial" font-size="9" fill="#555577">new roles only</text>
+  <text x="900" y="704" font-family="Segoe UI, Arial" font-size="9" fill="#66aaff">📥 Standard</text>
+  <text x="958" y="704" font-family="Segoe UI, Arial" font-size="9" fill="#555577">simple/trusted</text>
+  <text x="1050" y="704" font-family="Segoe UI, Arial" font-size="9" fill="#4499ee">📥 Diff</text>
+  <text x="1074" y="704" font-family="Segoe UI, Arial" font-size="9" fill="#555577">preview/selective</text>
+</svg>
