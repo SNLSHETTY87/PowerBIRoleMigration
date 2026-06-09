@@ -15,12 +15,17 @@ Right-click → done. No PowerShell modules. No SSMS. No scripts to paste.
 | 📤 **Export — Select Roles** | Checkbox UI to pick specific roles. ★ New auto-selects roles not in previous export |
 | 📥 **Import — Standard** | File picker + confirmation dialog. Simple and reliable for full imports |
 | 📥 **Import — Select + Diff** | Diff view (NEW vs UPDATE), role selector, dry run mode |
+| 👥 **Merge Members Only** | Copies only members into matching target roles, merging with existing ones. RLS DAX untouched, missing roles skipped |
 
 ### What gets copied
 - ✅ Roles
 - ✅ Members (Entra users and groups)
 - ✅ RLS DAX filter expressions
 - ✅ ModelPermission level
+
+> **Merge Members Only** is the exception: it copies *members only*. The target's existing
+> members are kept (new ones merged in), and its RLS DAX filters and ModelPermission are
+> preserved — never overwritten.
 
 ### What does NOT get copied
 - ❌ OLS (Object Level Security)
@@ -57,7 +62,7 @@ Right-click → done. No PowerShell modules. No SSMS. No scripts to paste.
    > If a `MacroActions.json` already exists, back it up first — this will replace it.
 5. Reopen Tabular Editor 2
 
-**Verify:** Connect to any model → right-click the model name in TOM Explorer → you should see **Copy Roles ▶** with 4 sub-items.
+**Verify:** Connect to any model → right-click the model name in TOM Explorer → you should see **Copy Roles ▶** with 5 sub-items.
 
 ---
 
@@ -116,6 +121,23 @@ powerbi://api.powerbi.com/v1.0/myorg/YOUR_WORKSPACE_NAME
 6. Optional: check **Dry Run** → click Import → see preview without committing
 7. Click **Import Selected** → confirm → done
 
+### 👥 Merge Members Only
+> Use to push members between models without touching RLS DAX — e.g. add new users/groups to existing roles in a target model.
+
+1. TE2 → connect to **target** model
+2. Right-click model → **Copy Roles → 👥 Merge Members Only**
+3. File picker opens at `C:\temp\PBIRoleCopy\` — pick a source export file
+4. Grid loads — each role classified by what its members need:
+   - 🟢 **[+ MERGE]** — role exists in target and the file has new members to add (pre-ticked)
+   - ⚪ **[IN SYNC]** — role exists, all source members already present (nothing to do)
+   - 🔴 **[MISSING]** — role not present in target → skipped, can't be selected
+5. Use **● New members** to tick only roles that have members to add, or the filter box to narrow
+6. Click **▶ Merge Members** → confirmation shows new-member count → **Yes**
+
+> **Additive only.** The target's existing members are kept and new ones merged in — nothing
+> is removed. RLS DAX filters and ModelPermission are left untouched.  
+> Skipped (missing) roles are written to `missing_roles_<timestamp>.txt` in the same folder.
+
 ---
 
 ## 📁 File Structure
@@ -127,7 +149,8 @@ C:\temp\PBIRoleCopy\
 ├── audit.log                                      ← every export + import logged
 ├── roles_ModelA_20260516_0900.json                ← full export
 ├── roles_ModelA_partial_20260516_1430.json        ← partial export (selected roles)
-└── roles_ModelB_20260515_1620.json                ← another model
+├── roles_ModelB_20260515_1620.json                ← another model
+└── missing_roles_20260516_1510.txt                ← roles skipped during a member merge
 ```
 
 **Audit log format:**
@@ -135,6 +158,7 @@ C:\temp\PBIRoleCopy\
 2026-05-16 09:00:21 | EXPORT | Model A | 247 roles | roles_ModelA_20260516_0900.json
 2026-05-16 09:02:15 | IMPORT | Model A -> Model B | 247 roles | roles_ModelA_20260516_0900.json
 2026-05-16 14:30:05 | EXPORT | Model A | 2 of 247 roles | roles_ModelA_partial_20260516_1430.json
+2026-05-16 15:10:02 | MERGE MEMBERS | Model A -> Model B | 12 roles, 37 new members, 3 skipped | roles_ModelA_20260516_0900.json
 ```
 
 ---
@@ -149,6 +173,7 @@ C:\temp\PBIRoleCopy\
 | **Same-model check** | Extra warning if source and target are the same model |
 | **Diff view** | See NEW vs UPDATE before committing |
 | **Dry run mode** | Full preview with zero risk — no `ExecuteCommand` called |
+| **Merge is additive** | Member merge only adds — existing members, RLS DAX, and ModelPermission are never removed or overwritten |
 | **Audit log** | Every export and import recorded with timestamp |
 
 ---
@@ -197,13 +222,14 @@ The file uses a `##TARGETDB##` placeholder — replaced at import time with the 
 
 | File | Description |
 |---|---|
-| `MacroActions.json` | Drop into `%LOCALAPPDATA%\TabularEditor\` — all 4 actions |
-| `docs/PBI_RoleCopy_Infographic.svg` | Visual overview of all 4 actions |
-| `docs/PBI_RoleCopy_HowTo_v4.docx` | Full step-by-step guide with screenshots |
-| `scripts/TE2_ExportAll.cs` | Export all roles script (standalone paste version) |
-| `scripts/TE2_ExportSelect.cs` | Export selected roles script (standalone paste version) |
-| `scripts/TE2_ImportStandard.cs` | Import standard script (standalone paste version) |
-| `scripts/TE2_ImportDiff.cs` | Import select + diff script (standalone paste version) |
+| `MacroActions.json` | Drop into `%LOCALAPPDATA%\TabularEditor\` — all 5 actions |
+| `docs/PBI_RoleCopy_Infographic.svg` | Visual overview of the actions |
+| `docs/PBI_RoleCopy_HowTo.docx` / `.pdf` | Full step-by-step guide with screenshots |
+| `Scripts/TE2_Export - All Rolesy.cs` | Export all roles script (standalone paste version) |
+| `Scripts/TE2_SelectiveExport.cs` | Export selected roles script (standalone paste version) |
+| `Scripts/TE2_ Import - Standard.cs` | Import standard script (standalone paste version) |
+| `Scripts/TE2_SelectiveImport.cs` | Import select + diff script (standalone paste version) |
+| `Scripts/TE2_MergeMembers.cs` | Merge members only script (standalone paste version) |
 
 ---
 
